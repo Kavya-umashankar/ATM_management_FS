@@ -6,13 +6,12 @@
 #include<stdlib.h>
 #include<string.h>
 #define max 10
-#define datafile "cust.txt"
-#define indexfile "cindex.txt"
+#define datafile "custmain.txt"
+#define indexfile "c1index.txt"
 using namespace std;
 fstream stdfile, indfile;
 int i,indsize;
 char buffer[80];
-
 class index
 {
 public:
@@ -37,44 +36,6 @@ break;
 }
 indfile.close();
 }
-void opener(fstream &sfile,char * fn,std::_Ios_Openmode mode)
-{
-sfile.open(fn,mode);
-if(!sfile)
-{
-cout<<"Unable to open the file\n";
-exit(1);
-}
-}
-void unpack()
-{
-stdfile.getline(buffer,100,'\n');
-i=0;
-if(buffer[i]!='$')
-{
-cout<<"\n";
-cout<<"|";
-while(buffer[i]!='\0')
-{
-if(buffer[i]=='|')
-cout<<"|";
-else
-cout<<buffer[i];
- i++;
-}
-}
-}
-
-
-void recDisp(int pos)
-{
-opener(stdfile,datafile,ios::in);
-stdfile.seekg(atoi(id[pos].addr),ios::beg);
-cout<<"||\n\n";
- cout<<"|"<<setw(15)<<"Transaction id "<<"|"<<setw(10)<<"acc no"<<"|"<<setw(10)<<"Name"<<"|"<<setw(10)<<"entry time"<<"|"<<setw(10)<<"exit time"<<"|"<<setw(10)<<"withdraw"<<"|"<<setw(10)<<"deposit"<<"|"<<setw(10)<<"account type"<<"|";
- unpack();
-}
-
 int  search(char *fusn)
 {
 int low=0,high=indsize-1;
@@ -91,20 +52,48 @@ high=mid-1;
 }
 return -1;
 }
+void opener(fstream &sfile,char * fn,std::_Ios_Openmode mode)
+{
+sfile.open(fn,mode);
+if(!sfile)
+{
+cout<<"Unable to open the file\n";
+exit(1);
+}
+}
+// function to write
+void index::write()
+{
+opener(indfile,indexfile,ios::out);
+for(i=0;i<indsize;i++)
+indfile<<id[i].iusn<<"|"<<id[i].addr<<"\n";
+indfile.close();
+}
+void remove(int pos)
+{
+opener(stdfile,datafile,ios::in|ios::out);
+stdfile.seekg(atoi(id[pos].addr),ios::beg);
+stdfile.put('$');
+for(i=pos;i<indsize;i++)
+id[i]=id[i+1];
+indsize--;
+}
 
 int main(int argc,char *argv[])
 {
 int ch,pos,flag;
 char susn[15];
 in.initial();
-char * tid=argv[1];
+char *tid=argv[1];
 strcpy(susn,tid);
-
-flag=search(susn);
-if(flag==-1)
-cout<<"Record Not found\n";
+pos=search(susn);
+if(pos==-1)
+cout<<"1";
 else
-recDisp(flag);
+{
+remove(pos);
+in.write();
+}
 
 
 }

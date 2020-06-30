@@ -45,7 +45,7 @@ body{
 </style>
 <body>
 <?php
-$d= shell_exec("disptry.exe ");
+$d= shell_exec("disptry2.exe ");
 //echo $d;
 
 //print_r(explode("|",$d));
@@ -65,16 +65,12 @@ echo "<th>".$str[1]."</th>";
 echo "<th>".$str[2]."</th>";
 echo "<th>".$str[3]."</th>";
 echo "<th>".$str[4]."</th>";
-echo "<th>".$str[5]."</th>";
-echo "<th>".$str[6]."</th>";
-echo "<th>".$str[7]."</th>";
-echo "<th>".$str[8]."</th>";
-echo "<th>".$str[9]."</th>";
+
 echo "</tr>";
 echo "<tr>";
 for($i = 11 ; $i != $c-1 ; $i++)
 {
-    if($i%10==0)
+    if($i%5==0)
     {
         echo "</tr>";
         echo "<tr>";

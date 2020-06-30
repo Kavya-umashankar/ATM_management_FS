@@ -1,2 +1,15 @@
-1234567890|Kavya|saving|4000 |
-1234567891|Umashankar|Saving|8000|
+$234567890|Varsha|current|400000 |
+1212121212|Umashankar|saving|50000 |
+1234567891|Harsha|current|40000 |
+1234567890|Varsha|current|350000 |
+
+0987654321|Architha|saving|30000 |
+||| |
+$12|Umashankar|saving|48800 |
+212|Umashankar|saving|50000 |
+$234561234|Prakash|saving|120000 |
+||| |
+$234561234|Prakash|saving|124000 |
+$234561234|Prakash|saving|120000 |
+$234561234|Prakash|saving|114000 |
+1234561234|Prakash|saving|120000 |

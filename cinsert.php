@@ -33,7 +33,7 @@ $deposit="";
 $acctype=$_POST['acctype'];
 
 
-echo shell_exec("insert.exe  \"$accno\" \"$name\"  \"$acctype\" \"$bal \"" );
+shell_exec("insert.exe  \"$accno\" \"$name\"  \"$acctype\" \"$bal \"" );
 //echo shell_exec("hashing.exe  \"$tid1\"  \"$accno\" \"$name\" \"$entry\" \"$exit1\"  \"$with\" \"$deposit\" \"$acctype\" " );
 
 ?>
@@ -42,12 +42,7 @@ echo shell_exec("insert.exe  \"$accno\" \"$name\"  \"$acctype\" \"$bal \"" );
 
 <table align="center" border="1" >
 <tr>
-<td colspan="2"><h2>Transaction receipt</h2></td>
-</tr>
-<th>Transaction ID:</th>
-<?php
-//echo "<td>".$tid1."</td>";
-?>
+<td colspan="2"><h2> Account Created: Details</h2></td>
 </tr>
 <tr>
 <th>Account Number:</th>
@@ -62,13 +57,7 @@ echo "<td>".$name."</td>";
 ?>
 </tr>
 <tr>
-<th>Entry Time:</th>
-<?php
-echo "<td>".$entry."</td>";
-?>
-</tr>
-<tr>
-<th>Exit Time:</th>
+<th>At Time:</th>
 <?php
 echo "<td>".$exit1."</td>";
 ?>

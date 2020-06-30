@@ -29,13 +29,7 @@ body{
 </style>
 <body>
 <form action="cinsert.php" method="POST">
-<?php
-      $tidrand=rand(1000000,9999999);
-      $stid = (string) $tidrand;
-      $tid = "tid".$stid;
-      $_SESSION["tid"] = $tid;
-      echo "<h1>Transaction Id:  \"  ".$tid." \"</h1>";      
-      ?>
+
 
   <div class="form-row">
     <div class="form-group col-md-6">

@@ -6,8 +6,8 @@
 #include<stdlib.h>
 #include<string.h>
 #define max 10
-#define datafile "cust.txt"
-#define indexfile "cindex.txt"
+#define datafile "custmain.txt"
+#define indexfile "c1index.txt"
 using namespace std;
 fstream stdfile, indfile;
 int i,indsize;
@@ -71,7 +71,7 @@ void recDisp(int pos)
 opener(stdfile,datafile,ios::in);
 stdfile.seekg(atoi(id[pos].addr),ios::beg);
 cout<<"||\n\n";
- cout<<"|"<<setw(15)<<"Transaction id "<<"|"<<setw(10)<<"acc no"<<"|"<<setw(10)<<"Name"<<"|"<<setw(10)<<"entry time"<<"|"<<setw(10)<<"exit time"<<"|"<<setw(10)<<"withdraw"<<"|"<<setw(10)<<"deposit"<<"|"<<setw(10)<<"account type"<<"|";
+ cout<<"|"<<setw(10)<<"acc no"<<"|"<<setw(10)<<"Name"<<"|"<<setw(10)<<"account type"<<"|"<<"balance";
  unpack();
 }
 

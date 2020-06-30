@@ -16,38 +16,45 @@ session_start();
 </head>
 <style>
 form{
-    margin-top:4cm;
-    margin-right:3cm;
-    margin-left:3cm;
-    font-weight:bold;
+  align:center;
+  margin-top:8cm;
+  margin-left:11cm;
+}
+body{
+  background-image:url("http://www.nexo-standards.org/sites/default/files/background_standards/atm.jpeg");
+  background-size:1550px 800px;
+  background-repeat:no-repeat;
+}
+div.form-group{
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  font-weight:bold;
   color:#000000;
-  font-size:20px;
-  font-family:courier;
-  
-   
+  font-size:25px;
+
+}
+.btn{
+  margin-left:12cm;
 }
 
-body{
-  background-color:grey;
-}
 
 
 </style>
 <body>
-<form action="check.php" method="POST">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="accno">Account number</label>
-      <input type="number" class="form-control" id="accno" name="accno">
+<form action="searchcon2.php" method="POST">
+  <div class="form-group col-md-6">
+  <div class transbox>
+      <label for="tid">Account Number</label>
+      <br>
+      <input type="text"  class="form-control" id="tid" name="tid" required>
+    
+      <button type="submit" class="btn btn-primary">SEARCH</button>
+      <br>
     </div>
-
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-     
-  <button type="submit" class="btn btn-primary">SUBMIT</button>
-</form>
-<script>
-
-</script>
+    </div>
+   
 </body>
+
+</html>

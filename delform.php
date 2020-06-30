@@ -73,11 +73,12 @@ echo "<th>".$str[5]."</th>";
 echo "<th>".$str[6]."</th>";
 echo "<th>".$str[7]."</th>";
 echo "<th>".$str[8]."</th>";
+echo "<th>".$str[9]."</th>";
 echo "</tr>";
 echo "<tr>";
-for($i = 10 ; $i != $c-1 ; $i++)
+for($i = 11 ; $i != $c-1 ; $i++)
 {
-    if($i%9==0)
+    if($i%10==0)
     {
         echo "</tr>";
         echo "<tr>";

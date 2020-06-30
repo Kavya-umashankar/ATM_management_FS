@@ -37,26 +37,22 @@ body{
       echo "<h1>Transaction Id:  \"  ".$tid." \"</h1>";      
       ?>
 
+    <h2>Account Number: </h2>
+    <?php
+    $acc= $_SESSION["ACCNO"];
+    echo "<h2> $acc</h2><br>";
+    $n = $_SESSION["NAME"];
+    echo "<h2>NAME: $n </h2><br>";
+    $a = $_SESSION['ACCTYPE'];
+    echo "<h2>ACCOUNT TYPE: $a </h2><br>";
+    $b = $_SESSION["BAL"];
+    echo "<h2>CURRENT BALANCE : Rs $b </h2><br>"
+    ?>
   <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="accno">Account number</label>
-      <input type="number" class="form-control" id="accno" name="accno">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" name="name">
-    </div>
-  </div>
-  <div class="form-group">
     <label for="inputAddress2">Deposit amount:</label>
     <input type="number" class="form-control" id="deposit" placeholder="" name="deposit">
   </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="acctype">account type</label>
-      <input type="text" class="form-control" id="acctype" name="acctype">
-    </div>
-  </div>
+
   <?php
     $entrytime = date('d-m-y h:i:s');
     //print_r(explode(" ",$entrytime));

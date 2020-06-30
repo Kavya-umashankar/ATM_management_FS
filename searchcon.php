@@ -65,9 +65,9 @@ echo "<th>".$str[7]."</th>";
 echo "<th>".$str[8]."</th>";
 echo "<th>".$str[9]."</th>";
 echo "<th>".$str[10]."</th>";
+echo "<th>".$str[11]."</th>";
 echo "</tr>";
 echo "<tr>";
-echo "<td> $str[12]</td>";
 echo "<td> $str[13]</td>";
 echo "<td> $str[14]</td>";
 echo "<td> $str[15]</td>";
@@ -75,6 +75,7 @@ echo "<td> $str[16]</td>";
 echo "<td> $str[17]</td>";
 echo "<td> $str[18]</td>";
 echo "<td> $str[19]</td>";
+echo "<td> $str[20]</td>";
 echo "</tr>";
 echo "</table>";
 

@@ -61,9 +61,15 @@ body{
 </style>
 <body>
 <a href='create.php'><button class="button button3" style="width:17.3%">CREATE </button></a><br>
-<a href='disptry1.php'><button class="button button3" style="width:17.3%">DISPLAY </button></a><br>
-<a href='schform.php'><button class="button button4" style="width:17.3%">SEARCH</button></a><br>
-<a href='delform.php'><button class="button button5" style="width:17.3%">DELETE</button></a><br>
+<a href='disptry1.php'><button class="button button3" style="width:17.3%">DISPLAY Transactions </button></a><br>
+<a href='disptry2.php'><button class="button button3" style="width:17.3%">DISPLAY Accounts </button></a><br>
+
+<a href='schform.php'><button class="button button4" style="width:17.3%">SEARCH transactions</button></a><br>
+<a href='schform2.php'><button class="button button4" style="width:17.3%">SEARCH Accounts</button></a><br>
+
+<a href='delform.php'><button class="button button5" style="width:17.3%">DELETE Transaction</button></a><br>
+<a href='delform2.php'><button class="button button5" style="width:17.3%">Close Account</button></a><br>
+
 <a href='front.php'><button class="button button6" style="width:17.3%">BACK</button></a><br>
 
 
