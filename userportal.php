@@ -26,6 +26,12 @@ body{
     background-image:url("https://wallpaperset.com/w/full/7/f/7/110547.jpg");
     color:#FFE5B4;
 }
+h4{
+  margin-left:2cm;
+}
+.btn{
+  margin-left:15cm;
+}
 </style>
 <body>
 <form action="abc.php" method="POST">
@@ -33,42 +39,50 @@ body{
       $tidrand=rand(1000000,9999999);
       $stid = (string) $tidrand;
       $tid = "tid".$stid;
-      $_SESSION["tid"] = $tid;
+      $_SESSION["tid1"] = $tid;
       
-      echo "<h1>Transaction Id:  \"  ".$tid." \"</h1>";      
-      ?>
-  <h2>Account Number: </h2>
-    <?php
+     
+     
+     echo "<h2>Transaction Id:  \"  ".$tid." \"</h2>";  
+     echo"<br>";
     $acc= $_SESSION["ACCNO"];
-    echo "<h2> $acc</h2><br>";
+    echo "<h2>Account number: $acc</h2><br>";
     $n = $_SESSION["NAME"];
-    echo "<h2>NAME: $n </h2><br>";
+    echo "<h2>Name: $n </h2><br>";
     $a = $_SESSION['ACCTYPE'];
-    echo "<h2>ACCOUNT TYPE: $a </h2><br>";
+    echo "<h2>Account type: $a </h2><br>";
     $b = $_SESSION["BAL"];
-    echo "<h2>CURRENT BALANCE : Rs $b </h2><br>"
+    echo "<h2>Current balance : Rs $b </h2><br>"
     ?>
+    <form>
   <div class="form-row">
   
   <div class="form-group">
-    <label for="with">Withdraw amount:</label>
+    <label for="with"><h2>Withdraw amount:<h2></label>
     <input type="number" class="form-control" id="with" name="with" placeholder="">
   </div>
+  <br>
+  </form>
+
   
-  <?php
+  <br>
+  <br>
+  <div class="form-group">
+    <div class="form-check">
+     
+</form>
+<br>
+<?php
     date_default_timezone_set('Asia/Kolkata');
     $entrytime = date('d-m-y h:i:s',time());
     //print_r(explode(" ",$entrytime));
     $timee=explode(" ",$entrytime);
     $_SESSION['entrytime'] = $timee[0]."_".$timee[1];
+    echo"<br>";
     echo "<h4><br>Entry Time Recorded :".$entrytime."</h4>";
   ?>
-  <br>
-  <div class="form-group">
-    <div class="form-check">
-     
+  
   <button type="submit" class="btn btn-primary">SUBMIT</button>
-</form>
 <script>
 
 </script>

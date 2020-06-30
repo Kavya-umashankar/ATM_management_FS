@@ -48,7 +48,7 @@ body{
 <?php
 $tid=$_POST['tid'];
 $a=shell_exec("search.exe $tid");
-//print_r(explode("|",$a));
+print_r(explode("|",$a));
 $str =explode("|",$a);
 if (count($str)<4)
 {
@@ -65,9 +65,12 @@ echo "<th>".$str[7]."</th>";
 echo "<th>".$str[8]."</th>";
 echo "<th>".$str[9]."</th>";
 echo "<th>".$str[10]."</th>";
-echo "<th>".$str[11]."</th>";
+//echo "<th>".$str[11]."</th>";
+echo "<th>BALANCE</th>";
+
 echo "</tr>";
 echo "<tr>";
+echo "<td> $str[12]</td>";
 echo "<td> $str[13]</td>";
 echo "<td> $str[14]</td>";
 echo "<td> $str[15]</td>";

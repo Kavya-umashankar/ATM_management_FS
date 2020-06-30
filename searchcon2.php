@@ -64,10 +64,10 @@ echo "<th>".$str[6]."</th>";
 
 echo "</tr>";
 echo "<tr>";
+echo "<td> $str[7]</td>";
 echo "<td> $str[8]</td>";
 echo "<td> $str[9]</td>";
 echo "<td> $str[10]</td>";
-echo "<td> $str[11]</td>";
 echo "</tr>";
 echo "</table>";
 

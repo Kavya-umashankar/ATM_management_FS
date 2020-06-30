@@ -9,12 +9,21 @@
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  .button6 {
-    border-radius: 8px;
-    margin-top:1cm;
-    margin-left:5cm;
-
+  
 }
+body{
+    background-image:url("https://wallpaperset.com/w/full/7/f/7/110547.jpg");
+    color:white;
+    border-width:thick;
+    font-size:50px;
+}
+table{
+  width:50%;
+  height:50%;
+  font-size:20px;
+}
+h3{
+  color:white;
 }
 </style>
 <?php
@@ -45,14 +54,14 @@ print_r(explode("|",$f));
 ?>
 <html>
 <body>
-
+<div id="printTable">
 <table align="center" border="1" >
 <tr>
 <td colspan="2"><h2>Transaction receipt</h2></td>
 </tr>
 <th>Transaction ID:</th>
 <?php
-//echo "<td>".$tid1."</td>";
+echo "<td>".$tid1."</td>";
 ?>
 </tr>
 <tr>
@@ -98,6 +107,40 @@ echo "<td>".$b1."</td>";
 ?>
 </tr>
 </table>
+</div>
 <a href='front.php'><button class="button button6" style="width:17.3%">BACK</button></a><br>
+
+<a href="#null" onclick="printContent('printTable')"><h3>Click to print table<h3></a>
+<script type="text/javascript">
+<!--
+function printContent(id){
+str=document.getElementById(id).innerHTML
+newwin=window.open('','printwin','left=100,top=100,width=400,height=400')
+newwin.document.write('<HTML>\n<HEAD>\n')
+newwin.document.write('<TITLE>Print Page</TITLE>\n')
+newwin.document.write('<script>\n')
+newwin.document.write('function chkstate(){\n')
+newwin.document.write('if(document.readyState=="complete"){\n')
+newwin.document.write('window.close()\n')
+newwin.document.write('}\n')
+newwin.document.write('else{\n')
+newwin.document.write('setTimeout("chkstate()",2000)\n')
+newwin.document.write('}\n')
+newwin.document.write('}\n')
+newwin.document.write('function print_win(){\n')
+newwin.document.write('window.print();\n')
+newwin.document.write('chkstate();\n')
+newwin.document.write('}\n')
+newwin.document.write('<\/script>\n')
+newwin.document.write('</HEAD>\n')
+newwin.document.write('<BODY onload="print_win()">\n')
+newwin.document.write(str)
+newwin.document.write('</BODY>\n')
+newwin.document.write('</HTML>\n')
+newwin.document.close()
+}
+//-->
+</script>
+
 
 

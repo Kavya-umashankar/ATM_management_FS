@@ -42,12 +42,14 @@ body{
     margin-top:1cm;
     margin-left:30cm;
 }
+h3{
+    color:white;
+}
 </style>
 <body>
 <?php
 $d= shell_exec("disptry2.exe ");
-//echo $d;
-
+//echo
 //print_r(explode("|",$d));
 //echo gettype($d);
 $str =explode("|",$d);
@@ -59,16 +61,17 @@ $c=array_search($matches,$str);
 //echo "<br>------------------------------------------------------------------------------------------------------------------------------------------------------------";
 //echo "<br>";
 echo "<h1 center> $str[0]</h1>";
+echo"<div id=\"printTable\">";
 echo "<table align=\"center\" cellpadding=\"7\" cellspacing=\"7\" border=\"3\" bordercolor=\"white\">";
 echo "<tr>";
-echo "<th>".$str[1]."</th>";
-echo "<th>".$str[2]."</th>";
-echo "<th>".$str[3]."</th>";
-echo "<th>".$str[4]."</th>";
+echo "<th>ACCOUNT NO</th>";
+echo "<th>NAME</th>";
+echo "<th>TYPE</th>";
+echo "<th>BALANCE</th>";
 
 echo "</tr>";
 echo "<tr>";
-for($i = 11 ; $i != $c-1 ; $i++)
+for($i = 1 ; $i != $c-1 ; $i++)
 {
     if($i%5==0)
     {
@@ -80,8 +83,44 @@ for($i = 11 ; $i != $c-1 ; $i++)
    
 }
 echo "</table>";
+echo"</div>";
 ?>
 <a href='manager.php'><button class="button button4" style="width:7.3%">BACK
 
 </button>
+
+<a href="#null" onclick="printContent('printTable')"><h3>Click to print table<h3></a>
+<script type="text/javascript">
+<!--
+function printContent(id){
+str=document.getElementById(id).innerHTML
+newwin=window.open('','printwin','left=100,top=100,width=400,height=400')
+newwin.document.write('<HTML>\n<HEAD>\n')
+newwin.document.write('<TITLE>Print Page</TITLE>\n')
+newwin.document.write('<script>\n')
+newwin.document.write('function chkstate(){\n')
+newwin.document.write('if(document.readyState=="complete"){\n')
+newwin.document.write('window.close()\n')
+newwin.document.write('}\n')
+newwin.document.write('else{\n')
+newwin.document.write('setTimeout("chkstate()",2000)\n')
+newwin.document.write('}\n')
+newwin.document.write('}\n')
+newwin.document.write('function print_win(){\n')
+newwin.document.write('window.print();\n')
+newwin.document.write('chkstate();\n')
+newwin.document.write('}\n')
+newwin.document.write('<\/script>\n')
+newwin.document.write('</HEAD>\n')
+newwin.document.write('<BODY onload="print_win()">\n')
+newwin.document.write(str)
+newwin.document.write('</BODY>\n')
+newwin.document.write('</HTML>\n')
+newwin.document.close()
+}
+//-->
+</script>
+
+
+
 </body>

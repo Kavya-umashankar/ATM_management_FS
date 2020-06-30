@@ -23,7 +23,7 @@ body{
     background-repeat:no-repeat;
     background-size:41cm 20cm;
 }
-.button {
+.btn {
   background-color: #0067cd;
   border:bold;
   color: white;
@@ -33,46 +33,26 @@ body{
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
+  margin-right:1cm;
 }
-.button3 {
-    border-radius: 8px;
-    margin-left:5cm;
-    margin-top:3cm;
 
-}
-.button4 {
-    border-radius: 8px;
-    margin-top:1cm;
-    margin-left:5cm;
-
-}
-.button5 {
-    border-radius: 8px;
-    margin-top:1cm;
-    margin-left:5cm;
-
-}
-.button6 {
-    border-radius: 8px;
-    margin-top:1cm;
-    margin-left:5cm;
-
+form{
+display:inline;
 }
 </style>
 <body>
-<a href='create.php'><button class="button button3" style="width:17.3%">CREATE </button></a><br>
-<a href='disptry1.php'><button class="button button3" style="width:17.3%">DISPLAY Transactions </button></a><br>
-<a href='disptry2.php'><button class="button button3" style="width:17.3%">DISPLAY Accounts </button></a><br>
-
-<a href='schform.php'><button class="button button4" style="width:17.3%">SEARCH transactions</button></a><br>
-<a href='schform2.php'><button class="button button4" style="width:17.3%">SEARCH Accounts</button></a><br>
-
-<a href='delform.php'><button class="button button5" style="width:17.3%">DELETE Transaction</button></a><br>
-<a href='delform2.php'><button class="button button5" style="width:17.3%">Close Account</button></a><br>
-
-<a href='front.php'><button class="button button6" style="width:17.3%">BACK</button></a><br>
-
-
+<br><br><br><br>
+  <a href="create.php" class="btn btn-primary" style="width:17.3%" height="100">CREATE</a>
+  <a href="schform2.php" class="btn btn-primary" style="width:17.3%" >SEARCH accounts</a>
+  <br><br>
+  <a href="disptry1.php" class="btn btn-primary" style="width:17.3%">DISPLAY transactions</a>
+  <a href="disptry2.php" class="btn btn-primary" style="width:17.3%" >DISPLAY accounts</a>
+  <br><br>
+  <a href="schform.php" class="btn btn-primary" style="width:17.3%">SEARCH transactions</a>
+  <a href="delform2.php" class="btn btn-primary" style="width:17.3%" >CLOSE accounts</a>
+  <br><br>
+  <a href="delform.php" class="btn btn-primary" style="width:17.3%">DELETE transactions</a>
+  <a href="front.php" class="btn btn-primary" style="width:17.3%" >BACK</a>
 
 
 

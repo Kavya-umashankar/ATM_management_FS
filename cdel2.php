@@ -11,6 +11,6 @@ $tid= $_POST['tid'];
 
  }
  else{
- header("location: disptry1.php"); 
+ header("location: disptry2.php"); 
  }
 ?>

@@ -65,14 +65,14 @@ $c=array_search($matches,$str);
 echo "<h1 center> $str[0]</h1>";
 echo "<table align=\"center\" cellpadding=\"7\" cellspacing=\"7\" border=\"3\" bordercolor=\"white\">";
 echo "<tr>";
-echo "<th>".$str[1]."</th>";
-echo "<th>".$str[2]."</th>";
-echo "<th>".$str[3]."</th>";
-echo "<th>".$str[4]."</th>";
+echo "<th>ACCOUNT NO</th>";
+echo "<th>NAME</th>";
+echo "<th>TYPE</th>";
+echo "<th>BALANCE</th>";
 
 echo "</tr>";
 echo "<tr>";
-for($i = 11 ; $i != $c-1 ; $i++)
+for($i = 1 ; $i != $c-1 ; $i++)
 {
     if($i%5==0)
     {

@@ -15,38 +15,50 @@ session_start();
 
 </head>
 <style>
+
 form{
-    margin-top:4cm;
-    margin-right:3cm;
-    margin-left:3cm;
-    font-weight:bold;
-  color:#000000;
-  font-size:20px;
-  font-family:courier;
-  
-   
+  align:center;
+  margin-top:8cm;
+  margin-left:11cm;
 }
 
 body{
-  background-color:grey;
-}
+    background-image:url("https://wallpaperset.com/w/full/7/f/7/110547.jpg");
+    color:white;
+    border-width:thick;
 
+  }
+
+  div.form-group{
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  font-weight:bold;
+  color:#000000;
+  font-size:25px;
+
+}
+.btn{
+  margin-left:12cm;
+}
 
 </style>
 <body>
+
+
 <form action="check.php" method="POST">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="accno">Account number</label>
-      <input type="number" class="form-control" id="accno" name="accno">
+  <div class="form-group col-md-6">
+  <div class transbox>
+      <label for="accno">Account Number</label>
+      <br>
+      <input type="number"  class="form-control" id="accno" name="accno" required>
+    
+      <button type="submit" class="btn btn-primary">SUBMIT</button>
+      <br>
+    </div>
     </div>
 
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-     
-  <button type="submit" class="btn btn-primary">SUBMIT</button>
-</form>
 <script>
 
 </script>

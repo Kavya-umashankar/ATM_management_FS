@@ -9,12 +9,17 @@
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  .button6 {
-    border-radius: 8px;
-    margin-top:1cm;
-    margin-left:5cm;
-
 }
+body{
+    background-image:url("https://wallpaperset.com/w/full/7/f/7/110547.jpg");
+    color:white;
+    border-width:thick;
+    font-size:50px;
+}
+table{
+  width:50%;
+  height:50%;
+  font-size:20px;
 }
 </style>
 
