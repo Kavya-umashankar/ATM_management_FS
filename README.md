@@ -5,3 +5,4 @@
 4. You can use the customer portal if the account exists, else it will ask you to get registered with the manager.
 5. In the manager portal, we can create,search and delete accounts and transaction.
 It uses simple indexing concept.
+Hashing code works onlly in Turbo c++
